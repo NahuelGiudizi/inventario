@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Control de Inventario Qm Cryogenic</title>
+
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Control inventario</h1>
+    <h2>Qm Cryogenic</h2>
+    <div id="foo"></div>
+
+    <label>
+      Discos de Amolar
+      <input id="inputDiscosAmolar" type="number" name="name" value="0" />
+    </label>
+
+    <label>
+      Discos de Orbitar
+      <input id="inputDiscosOrbitar" type="text" name="name" value="0" />
+    </label>
+
+    <label>
+      Stock Discos de Amolar
+      <output id="stockDiscosAmolar" name="stockda">0</output>
+    </label>
+
+    <label>
+      Stock Discos de Orbitar
+      <output id="stockDiscosOrbitar" name="stockdo">0</output>
+    </label>
+
+    <button id="plusButton" onclick="funcionSumar();">Click me to add +</button>
+
+    <button id="minusButton" onclick="funcionRestar();">
+      Click me to draw -
+    </button>
+
+    <script src="script.js"></script>
+
+    <script></script>
+  </body>
+</html>
