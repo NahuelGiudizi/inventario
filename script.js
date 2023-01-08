@@ -4,8 +4,7 @@ const stockDiscosAmolar = document.getElementById("stockDiscosAmolar");
 const stockDiscosOrbitar = document.getElementById("stockDiscosOrbitar");
 const inputDiscosAmolar = document.getElementById("inputDiscosAmolar");
 const inputDiscosOrbitar = document.getElementById("inputDiscosOrbitar");
-document.getElementById("foo").innerHTML = logger;
-
+var log = "";
 var currentdate = new Date();
 var datetime =
   currentdate.getDate() +
@@ -33,13 +32,13 @@ function funcionSumar() {
   stockDiscosAmolar.value = parseInt(0 + resultado0 + input0);
   stockDiscosOrbitar.value = parseInt(0 + resultado1 + input1);
 
-  logger += `${quienIngresa}, ha ingresado ${inputDiscosAmolar.value} discos de Amolar. ${datetime} `;
+  log += `${quienIngresa}, ha ingresado ${inputDiscosAmolar.value} discos de Amolar. ${datetime} \n`;
   inputDiscosAmolar.value = 0;
 
   //discos de Orbitar
 
   stockDiscosOrbitar.value = parseInt(0 + resultado1 + input1);
-  logger += `${quienIngresa}, ha ingresado ${inputDiscosOrbitar.value} discos de Orbitar. ${datetime} `;
+  log += `${quienIngresa}, ha ingresado ${inputDiscosOrbitar.value} discos de Orbitar. ${datetime} \n`;
   inputDiscosOrbitar.value = 0;
 }
 function funcionRestar() {
@@ -49,14 +48,17 @@ function funcionRestar() {
   let input0 = parseInt(inputDiscosAmolar.value);
   stockDiscosAmolar.value = parseInt(0 + resultado0 - input0);
 
-  var resultado = `${logger} ${quienRetira}, ha retirado ${inputDiscosOrbitar.value} discos de Orbitar. ${datetime} `;
-  logger = resultado;
+  log += `${quienRetira}, ha retirado ${inputDiscosOrbitar.value} discos de Orbitar. ${datetime} \n`;
   inputDiscosAmolar.value = 0;
   //discos de Orbitar
+
   let resultado1 = parseInt(stockDiscosOrbitar.value);
   let input1 = parseInt(inputDiscosOrbitar.value);
   stockDiscosOrbitar.value = parseInt(0 + resultado1 - input1);
-  var resultado01 = `${logger} ${quienRetira}, ha retirado ${inputDiscosOrbitar.value} discos de Orbitar. ${datetime}`;
-  logger = resultado01;
+  log += ` ${quienRetira}, ha retirado ${inputDiscosOrbitar.value} discos de Orbitar. ${datetime}\n`;
   inputDiscosOrbitar.value = 0;
+}
+
+function funcionHistorial() {
+  alert(`${log}`);
 }
