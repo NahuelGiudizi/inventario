@@ -32,9 +32,6 @@ function clockTick() {
   document.getElementById("date").innerHTML = text;
 }
 
-// here we run the clockTick function every 1000ms (1 second)
-setInterval(clockTick, 1000);
-
 function funcionSumar() {
   let quienIngresa = prompt("Quien ingresa?");
 
@@ -79,3 +76,5 @@ function funcionRestar() {
 function funcionHistorial() {
   alert(`${log}`);
 }
+// here we run the clockTick function every 1000ms (1 second)
+setInterval(clockTick, 1000);
