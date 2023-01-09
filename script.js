@@ -30,7 +30,6 @@ function clockTick() {
   // here we get the element with the id of "date" and change the content to the text variable we made above
   actualTime = text;
   document.getElementById("date").innerHTML = text;
-  text;
 }
 
 // here we run the clockTick function every 1000ms (1 second)
