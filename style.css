@@ -1,4 +1,5 @@
 body {
+  min-height: 100%;
   padding: 0vh;
   margin: 0vh;
   align-items: center;
