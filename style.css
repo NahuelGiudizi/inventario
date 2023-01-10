@@ -38,19 +38,9 @@ label {
 }
 
 button {
-  align-items: center;
-  display: absolute;
-  margin-left: 45%;
-  margin-right: 45%;
   text-align: center;
   align-items: center;
   width: fit-content;
-  transition-duration: 0.4s;
-}
-
-button:hover {
-  background-color: #4caf50; /* Green */
-  color: white;
 }
 
 output {
