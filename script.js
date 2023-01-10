@@ -49,30 +49,44 @@ function funcionSumar() {
   stockDiscosAmolar.value = parseInt(0 + resultado0 + input0);
   stockDiscosOrbitar.value = parseInt(0 + resultado1 + input1);
 
-  log += `${quienIngresa}, ha ingresado ${inputDiscosAmolar.value} discos de Amolar. ${actualTime} \n`;
-  inputDiscosAmolar.value = 0;
+  if (input0 >= 1) {
+    log += `${quienIngresa}, ha ingresado ${inputDiscosAmolar.value} discos de Amolar. ${actualTime} \n`;
+    inputDiscosAmolar.value = 0;
+  }
 
   //discos de Orbitar
 
   stockDiscosOrbitar.value = parseInt(0 + resultado1 + input1);
-  log += `${quienIngresa}, ha ingresado ${inputDiscosOrbitar.value} discos de Orbitar. ${actualTime} \n`;
-  inputDiscosOrbitar.value = 0;
+
+  if (input1 >= 1) {
+    log += `${quienIngresa}, ha ingresado ${inputDiscosOrbitar.value} discos de Orbitar. ${actualTime} \n`;
+    inputDiscosOrbitar.value = 0;
+  }
 }
 function funcionRestar() {
   //discos de Amolar
   let quienRetira = prompt("Quien retira?");
+
   let resultado0 = parseInt(stockDiscosAmolar.value);
   let input0 = parseInt(inputDiscosAmolar.value);
+
   stockDiscosAmolar.value = parseInt(0 + resultado0 - input0);
 
-  log += `${quienRetira}, ha retirado ${inputDiscosOrbitar.value} discos de Orbitar. ${actualTime} \n`;
+  if (input0 >= 1) {
+    log += `${quienRetira}, ha retirado ${inputDiscosAmolar.value} discos de Amolar. ${actualTime} \n`;
+  }
+
   inputDiscosAmolar.value = 0;
+
   //discos de Orbitar
 
   let resultado1 = parseInt(stockDiscosOrbitar.value);
   let input1 = parseInt(inputDiscosOrbitar.value);
+
   stockDiscosOrbitar.value = parseInt(0 + resultado1 - input1);
-  log += ` ${quienRetira}, ha retirado ${inputDiscosOrbitar.value} discos de Orbitar. ${actualTime}\n`;
+  if (input0 >= 1) {
+    log += ` ${quienRetira}, ha retirado ${inputDiscosOrbitar.value} discos de Orbitar. ${actualTime}\n`;
+  }
   inputDiscosOrbitar.value = 0;
 }
 
