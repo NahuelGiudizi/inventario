@@ -84,7 +84,7 @@ function funcionRestar() {
   let input1 = parseInt(inputDiscosOrbitar.value);
 
   stockDiscosOrbitar.value = parseInt(0 + resultado1 - input1);
-  if (input0 >= 1) {
+  if (input1 >= 1) {
     log += ` ${quienRetira}, ha retirado ${inputDiscosOrbitar.value} discos de Orbitar. ${actualTime}\n`;
   }
   inputDiscosOrbitar.value = 0;
