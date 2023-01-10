@@ -33,7 +33,7 @@ function clockTick() {
 }
 
 // here we run the clockTick function every 1000ms (1 second)
-setInterval(clockTick, 1000);
+setInterval(clockTick, 20);
 
 function funcionSumar() {
   let quienIngresa = prompt("Quien ingresa?");
